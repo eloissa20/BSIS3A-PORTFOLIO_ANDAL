@@ -1,11 +1,25 @@
-// JavaScript code in script.js
+let sections = document.querySelectorAll('section');
+let navLinks = document.querySelectorAll('header nav a');
 
-// Function to toggle the mobile navigation menu
-function toggleMenu() {
-    const menu = document.querySelector('.navbar');
-    menu.classList.toggle('active');
-}
+window.onscroll = () => {
+    sections.forEach(sec => {
+        let top = window.scrollY;
+        let offset = sec.offsetTop - 150;
+        let height = sec.offsetHeight;
+        let id = sec.getAttribute('id');
 
-// Add a click event listener to the menu icon
-const menuIcon = document.getElementById('menu-icon');
-menuIcon.addEventListener('click', toggleMenu);
+        if(top >= offset && top < offset + height) {
+            navLinks.forEach(links => {
+                links.classList.remove('active');
+                document.querySelector('header nav a[href*="' + id + '"]').classList.add('active');
+            });
+        };
+    });
+
+    let header = document.querySelector('header');
+
+    header.classList.toggle('sticky', window.scrollY > 100);
+
+};
+
+
