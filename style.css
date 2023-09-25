@@ -44,6 +44,10 @@ section {
     justify-content: space-between;
     align-items: center;
     z-index: 100;
+    transition-delay: 0s;
+	transition-duration: 0.4s;
+	transition-property: all;
+	transition-timing-function: ease;
 }
 
 .header.sticky {
@@ -52,9 +56,49 @@ section {
 
 .logo {
     font-size: 2.5rem;
-    color: var(--text-color);
-    font-weight: 600;
-    cursor: default;
+    position: relative;
+    text-transform: uppercase; 
+     font-size: 18px; 
+    letter-spacing: 3px; 
+    color: #000; display: flex; 
+    align-items: center; 
+}
+
+.logo span { 
+    display:flex; 
+    align-items: center; 
+    justify-content: center; 
+    width: 40px; height: 40px; 
+    background-color: #000; 
+    border-radius: 4px; 
+    color: #FFF; 
+    font-size: 22px; 
+    font-weight: 600; 
+    text-align: center; 
+    margin-right: 12px; 
+  }
+
+.logo:hover { 
+    color: #000;
+    cursor: default; 
+}
+
+.logo::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: black;
+    animation: showRight 1s ease forwards;
+    animation-delay: .4s;
+}
+
+@keyframes showRight {
+    100% {
+      width: 0;
+    }
 }
 
 .navbar a {
