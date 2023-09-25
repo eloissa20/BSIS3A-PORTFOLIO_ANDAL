@@ -1,4 +1,4 @@
-@import url('https//fonts.googleapis.com/css2?family-Poppins:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
 
 * {
     margin: 0;
@@ -8,7 +8,7 @@
     border: none;
     outline: none;
     scroll-behavior: smooth;
-    font-family: 'Poppons', sans-serif;
+    font-family: 'Poppins', sans-serif; /* Fixed font-family name */
 }
 
 :root {
@@ -23,10 +23,9 @@ html {
     overflow-x: hidden;
 }
 
-
 body {
     background: var(--bg-color);
-    color: var(--text-color)
+    color: var(--text-color);
 }
 
 .header {
@@ -49,22 +48,19 @@ body {
     cursor: default;
 }
 
-.navar a {
+.navbar a {
     font-size: 1.7rem;
-    color: black;
+    color: var(--text-color); /* Changed color property */
     margin-left: 4rem;
 }
 
-.navar a:hover, 
-.navar a.active {
+.navbar a:hover,
+.navbar a.active { /* Changed .navar to .navbar */
     color: var(--main-color);
 }
-
 
 #menu-icon {
     font-size: 3.6rem;
     color: var(--text-color);
     display: none;
 }
-
-    
