@@ -54,7 +54,7 @@ section {
     font-size: 2.5rem;
     position: relative;
     text-transform: uppercase; 
-     font-size: 18px; 
+    font-size: 18px; 
     letter-spacing: 3px; 
     color: #000; display: flex; 
     align-items: center; 
@@ -115,12 +115,13 @@ section {
 
 .navbar a {
     font-size: 1.7rem;
-    color: var(--text-color); /* Changed color property */
+    color: var(--text-color); 
     margin-left: 4rem;
+    transition: .3s;
 }
 
 .navbar a:hover,
-.navbar a.active { /* Changed .navar to .navbar */
+.navbar a.active {
     color: var(--main-color);
 }
 
