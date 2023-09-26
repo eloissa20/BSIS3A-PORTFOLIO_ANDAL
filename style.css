@@ -12,10 +12,10 @@
 }
 
 :root {
-    --bg-color: #F2D8D8;
-    --second-bg-color: white;
-    --text-color: black;
-    --main-color: #99627A;
+    --bg-color: #352F44;
+    --second-bg-color: #5C5470;
+    --text-color: white;
+    --main-color: #FF78F0;
 }
 
 html {
@@ -39,7 +39,7 @@ section {
     left: 0;
     width: 100%;
     padding: 2rem 9%;
-    background: #C88EA7;
+    background: var(--bg-color);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -51,12 +51,11 @@ section {
 } 
 
 .logo {
-    font-size: 2.5rem;
     position: relative;
-    text-transform: uppercase; 
+    text-transform: uppercase;
     font-size: 18px; 
     letter-spacing: 3px; 
-    color: #000; display: flex; 
+    color: white; display: flex; 
     align-items: center; 
 }
 
@@ -67,7 +66,7 @@ section {
     width: 40px; height: 40px; 
     background-color: #000; 
     border-radius: 4px; 
-    color: #C88EA7; 
+    color: #FF78F0; 
     font-size: 22px; 
     font-weight: 600; 
     text-align: center; 
@@ -107,7 +106,7 @@ section {
 
 .navbar a:hover,
 .navbar a.active {
-    color: var(--second-bg-color);
+    color: var(--main-color);
 }
 
 #menu-icon {
