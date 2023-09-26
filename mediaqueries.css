@@ -40,10 +40,11 @@
         background: var(--bg-color);
         border-top: .1rem solid rgba(0, 0, 0, .2);
         box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
+        display: none;
     }
 
     .navbar.active {
-        display: block; /* Add this to display the navbar when the menu icon is clicked */
+        display: block;
     }
 
     .navbar a {
