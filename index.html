@@ -59,9 +59,52 @@
                 processing experience. Technologically competent, with experience with a variety of social media platforms, 
                 office technology programs, and advanced computer skills, as well as a positive attitude and a willingness 
                 and motivation to learn new programs.</p>
-            <a href="#" class="btn">Read More</a>
+            <div class="additional-content" style="display: none;">
+                <!-- Additional content goes here -->
+                <p>This is additional content that can be shown or hidden.</p>
+            </div>
+            <a href="#" class="btn read-more">Read More</a>
+            <a href="#" class="btn read-less" style="display: none;">Read Less</a>
+            
+            <div class="below-container">
+                <div class="below-box">
+                    <i class='bx bx-code'></i>
+                        <h3>Frontend Development</h3>
+                        <p>Lorem</p>
+                </div>
+    
+                <div class="below-box">
+                    <i class='bx bxs-camera'></i>
+                        <h3>Photography</h3>
+                        <p>Lorem</p>
+                </div>
+    
+                <div class="below-box">
+                    <i class='bx bxs-paint'></i>
+                    <h3>Graphic Design</h3>
+                    <p>Lorem</p>
+                </div>
+
+                <div class="below-box">
+                    <i class='bx bx-code'></i>
+                        <h3>Frontend Development</h3>
+                        <p>Lorem</p>
+                </div>
+    
+                <div class="below-box">
+                    <i class='bx bxs-camera'></i>
+                        <h3>Photography</h3>
+                        <p>Lorem</p>
+                </div>
+    
+                <div class="below-box">
+                    <i class='bx bxs-paint'></i>
+                    <h3>Graphic Design</h3>
+                    <p>Lorem</p>
+                </div>
         </div>
     </section>
+
 
     <section class="experience" id="experience">
         <p class="section__text__p1">Embark on a Journey Through </p>
@@ -128,6 +171,30 @@
     <script src="https://unpkg.com/scrollreveal"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const readMoreBtn = document.querySelector(".read-more");
+            const readLessBtn = document.querySelector(".read-less");
+            const additionalContent = document.querySelector(".additional-content");
+
+            // Show additional content and hide "Read More" button
+            readMoreBtn.addEventListener("click", function (event) {
+                event.preventDefault();
+                additionalContent.style.display = "block";
+                readMoreBtn.style.display = "none";
+                readLessBtn.style.display = "inline-block";
+            });
+
+            // Hide additional content and show "Read More" button
+            readLessBtn.addEventListener("click", function (event) {
+                event.preventDefault();
+                additionalContent.style.display = "none";
+                readMoreBtn.style.display = "inline-block";
+                readLessBtn.style.display = "none";
+            });
+        });
+    </script>
     
     <script src="script.js"></script>
 </body>

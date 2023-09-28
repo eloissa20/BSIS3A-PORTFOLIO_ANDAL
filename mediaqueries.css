@@ -79,6 +79,19 @@
         margin-top: 4rem;
     }
 
+    .additional-content {
+        width: 70vw;
+        margin-top: 4rem;
+    }
+    
+    .below-container {
+        margin: 1rem; /* Adjust margin for smaller screens */
+    }
+
+    .below-container .below-box {
+        width: 100%; /* Make the boxes full width on smaller screens */
+    }
+
     .experience h2 {
         margin-bottom: 3rem;
     }

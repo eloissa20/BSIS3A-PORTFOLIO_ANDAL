@@ -18,6 +18,7 @@
     --main-color: linear-gradient(to right, #DF45C6, #F066A6);
 }
 
+
 html {
     font-size: 62.5%;
     overflow-x: hidden;
@@ -39,11 +40,12 @@ section {
     left: 0;
     width: 100%;
     padding: 2rem 9%;
-    background: var(--bg-color);
+    background: rgba(var(--bg-color), 0); /* Set the alpha value to 0 */
     display: flex;
     justify-content: space-between;
     align-items: center;
     z-index: 100;
+    box-shadow: 0 8px 12px rgb(248, 71, 115); /* Adjust the shadow values as needed */
 }
 
 .header.sticky {
@@ -68,7 +70,7 @@ section {
     height: 40px;
     background:#DF45C6; /* Gradient background for the span */
     border-radius: 4px;
-    color: ; /* Set text color to transparent */
+    color: #FFFEC4; /* Set text color to transparent */
     font-size: 22px;
     font-weight: 600;
     -webkit-background-clip: var(--main-color); /* Apply gradient to text */
@@ -240,6 +242,55 @@ span {
     font-size: 1.6rem;
     margin: 2rem 0 3rem;
 }
+
+
+.below h2 {
+    margin-bottom: 5rem;
+}
+
+.below-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin: 3vh;
+}
+
+.below-container .below-box {
+    width: 30rem; /* Set a fixed width */
+    height: 20rem; /* Set a fixed height */
+    background: #DF45C6;
+    padding: 2rem; /* Adjust padding as needed */
+    border-radius: 2rem;
+    text-align: center;
+    border: .2rem solid var(--bg-color);
+}
+
+.below-container .below-box:hover {
+    border-color: var(--main-color);
+    transform: scale(1.02);
+}
+
+.below-box i {
+    font-size: 5rem; /* Reduce the icon size */
+    color: var(--main-color);
+}
+
+.below-box h3 {
+    font-size: 1.8rem; /* Reduce the heading size */
+    margin: 1rem 0; /* Reduce top and bottom margin */
+}
+
+.below-box p {
+    font-size: 1.4rem; /* Reduce the paragraph text size */
+    margin: 1rem 0; /* Reduce top and bottom margin */
+}
+
+.below-box .btn {
+    display: none; /* Hide the button */
+}
+
 
 .contact h2 {
     margin-bottom: 3rem;
