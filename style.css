@@ -310,8 +310,16 @@ span {
     background: var(--bg-color);
 }
 
+.upper-title {
+    text-align: center; /* Center the text horizontally */
+    font-size: 24px; /* Adjust the font size as desired */
+    color: var(--text-color);
+}
+
+
 .projects h2 {
     margin-bottom: 4rem;
+    color: #F066A6;
 }
 
 .projects-container {
@@ -324,7 +332,7 @@ span {
 .projects-container .projects-box {
     position: relative;
     border-radius: 2rem;
-    box-shadow: 0 0 1rem var(--bg-color);
+    box-shadow: 0 0 1rem #F066A6;
     overflow: hidden;
     display: flex;
 }
