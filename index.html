@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <title>Maria Eloissa Andal Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="mediaqueries.css">
@@ -20,7 +21,7 @@
         <nav class="navbar">
             <a href="#home" class="active">Home</a>
             <a href="#about">About</a>
-            <a href="#experience">Experience</a>
+            <a href="#service">service</a>
             <a href="#projects">Projects</a>
             <a href="#contact">Contact</a> <!-- Assuming you have a section with id "contact" -->
         </nav>
@@ -53,10 +54,10 @@
 
         <div class="about-content">
             <h2 class="heading">About <span>Me</span></h2>
-            <h3>Developer & Designer</h3>
+            <h3>Developer & <span>Designer</span></h3>
             <p>Creative, hardworking information systems student with an upbeat mindset and a diverse set of strong skills, 
                 anticipating to graduate in July 2025. Seeking an internship to apply for and expand my natural language 
-                processing experience. Technologically competent, with experience with a variety of social media platforms, 
+                processing service. Technologically competent, with service with a variety of social media platforms, 
                 office technology programs, and advanced computer skills, as well as a positive attitude and a willingness 
                 and motivation to learn new programs.</p>
             <div class="additional-content" style="display: none;">
@@ -66,73 +67,42 @@
             <a href="#" class="btn read-more">Read More</a>
             <a href="#" class="btn read-less" style="display: none;">Read Less</a>
             
-            <div class="below-container">
-                <div class="below-box">
-                    <i class='bx bx-code'></i>
-                        <h3>Frontend Development</h3>
-                        <p>Lorem</p>
-                </div>
-    
-                <div class="below-box">
-                    <i class='bx bxs-camera'></i>
-                        <h3>Photography</h3>
-                        <p>Lorem</p>
-                </div>
-    
-                <div class="below-box">
-                    <i class='bx bxs-paint'></i>
-                    <h3>Graphic Design</h3>
-                    <p>Lorem</p>
-                </div>
-
-                <div class="below-box">
-                    <i class='bx bx-code'></i>
-                        <h3>Frontend Development</h3>
-                        <p>Lorem</p>
-                </div>
-    
-                <div class="below-box">
-                    <i class='bx bxs-camera'></i>
-                        <h3>Photography</h3>
-                        <p>Lorem</p>
-                </div>
-    
-                <div class="below-box">
-                    <i class='bx bxs-paint'></i>
-                    <h3>Graphic Design</h3>
-                    <p>Lorem</p>
-                </div>
+            <div class="tab-titles">
+                <!-- Add unique IDs to the tab links and data-tab attributes -->
+                <p class="tab-links active-link" data-tab="skills" onclick="opentab('skills')">Skills</p>
+                <p class="tab-links" data-tab="experience" onclick="opentab('experience')">Experience</p>
+                <p class="tab-links" data-tab="education" onclick="opentab('education')">Education</p>
+            </div>
+            <div class="tab-contents active-tab" id="skills"> <!-- Add id="skills" -->
+                <ul>
+                    <!-- Content for Skills goes here -->
+                    <li>Skill 1</li>
+                    <li>Skill 2</li>
+                    <!-- Add your skills here -->
+                </ul>
+            </div>
+            <div class="tab-contents" id="experience"> <!-- Add id="experience" -->
+                <ul>
+                    <li>
+                        <i class='bx bx-user'></i>
+                        <span>Job Title</span><br>
+                        Description of your work experience
+                    </li>
+                </ul>
+            </div>
+            <div class="tab-contents" id="education"> <!-- Add id="education" -->
+                <ul>
+                    <li>
+                        <i class='bx bx-user'></i>
+                        <span>Education</span><br>
+                        Description of your education
+                    </li>
+                </ul>
+            </div>
+            
         </div>
     </section>
 
-
-    <section class="experience" id="experience">
-        <p class="section__text__p1">Embark on a Journey Through </p>
-        <h2 class="heading">My<span> Experience</span></h2>
-
-        <div class="experience-container">
-            <div class="experience-box">
-                <i class='bx bx-code'></i>
-                    <h3>Frontend Development</h3>
-                    <p>Lorem</p>
-                    <a href="#" class="btn">Read More</a>
-            </div>
-
-            <div class="experience-box">
-                <i class="bx bx-code-alt"></i>
-                    <h3>Web Development</h3>
-                    <p>Lorem</p>
-                    <a href="#" class="btn">Read More</a>
-            </div>
-
-            <div class="experience-box">
-                <i class='bx bxs-paint'></i>
-                <h3>Graphic Design</h3>
-                <p>Lorem</p>
-                <a href="#" class="btn">Read More</a>
-            </div>
-        </div>
-    </section>
 
     <section class="projects" id="projects">
         <p class="section__text__p1">Explore My </p>
@@ -195,6 +165,12 @@
             });
         });
     </script>
+
+
+    
+
+
+
     
     <script src="script.js"></script>
 </body>

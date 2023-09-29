@@ -62,6 +62,46 @@ const typed = new Typed('.multiple-text', {
 });
 
 
+document.addEventListener("DOMContentLoaded", function () {
+    // Get all tab links and tab contents
+    var tabLinks = document.querySelectorAll(".tab-links");
+    var tabContents = document.querySelectorAll(".tab-contents");
+
+    // Function to hide all tab contents
+    function hideTabs() {
+        tabContents.forEach(function (content) {
+            content.style.display = "none";
+        });
+    }
+
+    // Function to show the selected tab content
+    function showTab(tabName) {
+        hideTabs();
+        var selectedTab = document.getElementById(tabName);
+        if (selectedTab) {
+            selectedTab.style.display = "block";
+        }
+    }
+
+    // Add click event listeners to tab links
+    tabLinks.forEach(function (link) {
+        link.addEventListener("click", function () {
+            var tabName = link.getAttribute("data-tab");
+            showTab(tabName);
+            
+            // Remove "active-link" class from all links and add it to the clicked link
+            tabLinks.forEach(function (tabLink) {
+                tabLink.classList.remove("active-link");
+            });
+            link.classList.add("active-link");
+        });
+    });
+
+    // Initialize by opening the "Skills" tab
+    showTab("skills");
+});
+
+
 
 
 
