@@ -13,7 +13,7 @@
         padding: 10rem 3% 2rem;
     }
 
-    .experience {
+    .projects {
         padding-bottom: 7rem;
     }
 
@@ -92,15 +92,21 @@
         width: 100%; /* Make the boxes full width on smaller screens */
     }
 
-    .experience h2 {
+    .projects h2 {
         margin-bottom: 3rem;
+    }
+
+    .projects-container {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
 
 
 @media (max-width: 617px) {
-    
+    .projects-container {
+        grid-template-columns: 1fr;
+    }
 }
 
 @media (max-width: 450px) {
