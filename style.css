@@ -128,6 +128,10 @@ section {
 }
 
 .home {
+    background-image: url('./assets/home\ bg.gif'); /* Replace with your GIF path */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -288,20 +292,6 @@ span {
     
 }
 
-
-.tab-contents ul li br {
-    display: none; /* Hide the default line break */
-}
-
-.tab-contents ul li span {
-    font-size: 18px; /* Adjust the font size of the text */
-}
-
-.tab-contents ul li::before {
-    content: '\A'; /* Use a CSS pseudo-element to create a line break effect */
-    white-space: pre; /* Preserve white space and line breaks */
-    font-size: 24px; /* Adjust the font size of the line break */
-}
 
 
 
