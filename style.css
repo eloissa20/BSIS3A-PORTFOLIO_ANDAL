@@ -210,6 +210,7 @@ span {
     letter-spacing: .1rem;
     font-weight: 600;
     transition: .5s ease;
+    transition: background-color 0.3s ease-in-out 0.1s;
 }
 
 .btn:hover {
@@ -228,6 +229,25 @@ span {
 
 .about-img img {
     width: 35vw;
+    animation: floatImage 4s ease-in-out infinite;
+}
+
+@keyframes floatImage {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-2.4rem);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.about-img img:hover {
+    transform: scale(1.1);
+    filter: brightness(1.2);
+    transform: translate(0, -5px);
 }
 
 .heading {
@@ -283,6 +303,7 @@ span {
 
 .tab-links.active-link::after {
     width: 50%;
+    transition: width 0.3s ease-in-out;
 }
 
 .tab-contents ul li {

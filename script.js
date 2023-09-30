@@ -48,9 +48,10 @@ ScrollReveal({
 });
 
 ScrollReveal().reveal('.home-content, .heading', { origin: 'top' });
-ScrollReveal().reveal('.home-img, .experience-container, .projects-box, .contact form', { origin: 'buttom' });
+ScrollReveal().reveal('.home-img, , .projects-box, .contact form', { origin: 'buttom' });
 ScrollReveal().reveal('.home-content h1, .about-img', { origin: 'left' });
 ScrollReveal().reveal('.home-content p, .about-content', { origin: 'right' })
+
 
 
 const typed = new Typed('.multiple-text', {
