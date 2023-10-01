@@ -17,8 +17,9 @@
         padding-bottom: 7rem;
     }
 
-    .contact {
-        min-height: auto;
+    .contact-right, .contact-left {
+        flex-basis: 100%;
+        margin-right: 0; /* Reset margin for smaller screens */
     }
 
     .footer {
@@ -116,8 +117,8 @@
         font-size: 50%;
     }
 
-    .contact form .input-box input {
-        width: 100%;
+    .contact-right, .contact-left {
+        flex-basis: 100%;
     }
 }
 
