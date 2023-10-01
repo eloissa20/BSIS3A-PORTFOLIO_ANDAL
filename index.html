@@ -87,7 +87,7 @@
                 <p class="tab-links" data-tab="experience" onclick="opentab('experience')">Experience</p>
                 <p class="tab-links" data-tab="education" onclick="opentab('education')">Education</p>
             </div>
-            <div class="tab-contents active-tab" id="skills"> <!-- Add id="skills" -->
+            <div class="tab-contents active-tab" id="skills"> 
                 <ul>
                     <li>
                         <i class='bx bx-code'></i>
@@ -135,7 +135,7 @@
                     </li>
                 </ul>
             </div>
-            <div class="tab-contents" id="education"> <!-- Add id="education" -->
+            <div class="tab-contents" id="education">
                 <ul>
                     <li>
                         <i class='bx bxs-school'></i>
@@ -190,7 +190,7 @@
                 <div class="projects-layer">
                     <h4>Mobile User Interface</h4>
                     <p>Use of Adobe</p>
-                    <a href="#"><i class='bx bx-link-external'></i></a>
+                    <a href="https://github.com/eloissa20/ADOBE-FILE.git"><i class='bx bx-link-external'></i></a>
                 </div>
             </div>
 
@@ -232,26 +232,30 @@
             </div>   
         </div>
 
+ 
     <section class="contact" id="contact">
-        <h2 class="heading">Contact <span>Me!</span></h2>
+        <h2 class="title2">Contact <span>Me!</span><span class="animate scroll" style="--i:1;"></span></h2>
 
-        <form action="#">
+        <form name="submit-to-google-sheet">
             <div class="input-box">
-                <input type="text" placeholder="Full Name" required>
-                <input type="email" placeholder="Email Address" required>
+                <input type="text" name="Full Name" placeholder="Full Name" required>
+                <input type="email" name="Email" placeholder="Email Address" required>
             </div>
             <div class="input-box">
-                <input type="number" placeholder="Mobile Number" required>
-                <input type="text" placeholder="Email Subject" required>
+                <input type="number" name="Number" placeholder="Mobile Number" required>
+                <input type="text" name="Subject" placeholder="Email Subject" required>
             </div>
-            <textarea name="" id="" cols="30" rows="10" placeholder="Your Message" required></textarea>
+            <textarea name="Message" id="" cols="20" rows="5" placeholder="Your Message" required></textarea>
             <input type="submit" value="Send Message" class="btn">
         </form>
+        <div class="parent-container">
+            <span id="msg"></span>
+        </div>  
     </section>
 
     <footer class="footer">
         <div class="footer-text">
-            <p>All Rights Reserved</p>
+            <p>Copyright @ 2023 by Eloissa | All Rights Reserved.</p>
         </div>
 
         <div class="footer-iconTop">
@@ -287,11 +291,24 @@
         });
     </script>
 
-
-    
-
-
-
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycby0FrBHEqrF4eMzp8WWlO_Vez0R30bB9PvWC1twJ5p2LQTwVzh_YxV7RCd8ysw4__U_/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg = document.getElementById('msg')
+  
+        form.addEventListener('submit', e => {
+        e.preventDefault()
+        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => {
+                msg.innerHTML = "Message successfuly sent!"
+                setTimeout(function(){
+                    msg.innerHTML = ""
+                },1000)
+                form.reset
+            })
+            .catch(error => console.error('Error!', error.message))
+        })
+    </script>
     
     <script src="script.js"></script>
 </body>

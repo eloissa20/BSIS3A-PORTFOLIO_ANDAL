@@ -47,8 +47,8 @@ ScrollReveal({
 
 });
 
-ScrollReveal().reveal('.home-content, .heading', { origin: 'top' });
-ScrollReveal().reveal('.home-img, , .projects-box, .contact form', { origin: 'buttom' });
+ScrollReveal().reveal('.home-content, .heading, .upper-title, .title, .title2', { origin: 'top' });
+ScrollReveal().reveal('.home-img, .projects-box, .contact form', { origin: 'bottom' });
 ScrollReveal().reveal('.home-content h1, .about-img', { origin: 'left' });
 ScrollReveal().reveal('.home-content p, .about-content', { origin: 'right' })
 
@@ -101,11 +101,4 @@ document.addEventListener("DOMContentLoaded", function () {
     // Initialize by opening the "Skills" tab
     showTab("skills");
 });
-
-
-
-
-
-
-
 

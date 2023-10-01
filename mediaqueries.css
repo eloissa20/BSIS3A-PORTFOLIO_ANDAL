@@ -17,9 +17,8 @@
         padding-bottom: 7rem;
     }
 
-    .contact-right, .contact-left {
-        flex-basis: 100%;
-        margin-right: 0; /* Reset margin for smaller screens */
+    .contact {
+        min-height: auto;
     }
 
     .footer {
@@ -110,6 +109,7 @@
     .projects-container {
         grid-template-columns: 1fr;
     }
+
 }
 
 @media (max-width: 450px) {
@@ -117,7 +117,7 @@
         font-size: 50%;
     }
 
-    .contact-right, .contact-left {
+    .contact {
         flex-basis: 100%;
     }
 }
