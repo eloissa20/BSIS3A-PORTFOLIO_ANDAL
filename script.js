@@ -64,7 +64,6 @@ const typed = new Typed('.multiple-text', {
 
 
 document.addEventListener("DOMContentLoaded", function () {
-    // Get all tab links and tab contents
     var tabLinks = document.querySelectorAll(".tab-links");
     var tabContents = document.querySelectorAll(".tab-contents");
 
@@ -98,7 +97,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
-    // Initialize by opening the "Skills" tab
+    
     showTab("skills");
 });
 

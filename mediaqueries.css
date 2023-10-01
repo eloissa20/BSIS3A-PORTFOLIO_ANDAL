@@ -85,11 +85,11 @@
     }
     
     .below-container {
-        margin: 1rem; /* Adjust margin for smaller screens */
+        margin: 1rem; 
     }
 
     .below-container .below-box {
-        width: 100%; /* Make the boxes full width on smaller screens */
+        width: 100%;
     }
 
     .projects h2 {

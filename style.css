@@ -196,7 +196,7 @@ span {
     transition: color 0.3s ease; 
 }
 
-/* Change the link color on hover */
+
 .contact-info ul li a:hover {
     color: #F066A6; 
 }
