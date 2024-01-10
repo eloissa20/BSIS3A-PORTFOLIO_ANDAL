@@ -128,13 +128,23 @@ section {
 }
 
 .home {
-    background-image: url('./assets/bg\ gif.gif'); /* Replace with your GIF path */
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
+}
+
+.home::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 101%;
+    height: 100%;
+    background-image: url('./assets/bg\ gif.gif');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
 }
 
 .home-img img {
